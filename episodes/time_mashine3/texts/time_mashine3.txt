@@ -1,0 +1,12 @@
+Name	Time mashine 3
+Author	Mateusz Wroblewski
+Maps 	10
+Extras	Map file, graphic, music
+
+================================
+
+-----------------------------------------------------------------
+STORY
+""Evil runs away to his moonbase. Pekka takes after him, but it is very dangerous!
+ In the space Pekka can meet alien! There is no knowing WHAT'S then becomming?""
+-----------------------------------------------------------------

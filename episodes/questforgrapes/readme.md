@@ -1,8 +1,8 @@
-# Far away
+# Quest for grapes
 
-- **Author:** Nico Kallio
-- **Maps:** 8
-- **Extras:** None
+- **Author:** Antti Virkkunen
+- **Maps:** 6
+- **Extras:** Music file, tilesets
 - **Source:** http://mapstore.the.cz/ by vozice_09
 
 <br>

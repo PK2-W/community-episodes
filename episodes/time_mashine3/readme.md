@@ -1,8 +1,8 @@
-# Far away
+# Time mashine 3
 
-- **Author:** Nico Kallio
-- **Maps:** 8
-- **Extras:** None
+- **Author:** Mateusz Wroblewski
+- **Maps:** 10
+- **Extras:** Music file, graphic, music
 - **Source:** http://mapstore.the.cz/ by vozice_09
 
 <br>

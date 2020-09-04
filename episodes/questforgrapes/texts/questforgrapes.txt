@@ -1,0 +1,39 @@
+Name	Quest for grapes
+Author  Antti Virkkunen
+Maps	6
+Extras	Music file, tilesets
+
+================================
+
+
+            PEKKA THE ROOSTER AND THE QUEST FOR GRAPES DEMO
+***********************************************************************
+
+
+INSTALLATION:
+Just unzip to the main Pekka folder.
+
+
+PLOT:
+It was the birthday of Little Hen #08, and everything was almost ready.
+Exept for the cake. Little Hen #08 desperately wanted some grapes for
+her cake, but no-one could find any. Instead, Little Hen #12 foud a
+note signed by THE EVIL ONE! She gave it to Pekka who found out that
+THE EVIL ONE had stolen all the grapes of the whole world, and stored
+them all in his secret grape storage. Pekka se out at once to get back
+the grapes and kick some ugly crow ass.
+
+
+CREDITS:
+I, Antti Virkkunen, aka Leivos made all levels all by myself!
+
+
+SPECIAL THANKS TO:
+Doctor for the music heard in demolition depot
+Janne Kivilahti for the original game
+You, for bothering to download a mere beta
+
+ABOUT FUTURE VERSIONS:
+This is far from finished. I'm planning to add som more levels, perhaps
+use the new sprites and if people like this, maybe I'll consider
+finalizing the Castle Of Evil.
