@@ -2,7 +2,7 @@
 
 - **Author:** Mateusz Wroblewski
 - **Maps:** 10
-- **Extras:** Music file, graphic, music
+- **Extras:** Map file, graphic, music
 - **Source:** http://mapstore.the.cz/ by vozice_09
 
 <br>
