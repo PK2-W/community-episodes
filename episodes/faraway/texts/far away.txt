@@ -1,0 +1,9 @@
+Name	Far away
+Author	Nico Kallio
+Maps	8
+Extras	None
+
+===================
+
+This episode was not tested. If you find errors contact author
+at [REMOVED FOR SAFETY]
