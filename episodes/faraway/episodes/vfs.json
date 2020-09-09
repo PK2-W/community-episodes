@@ -1,0 +1,13 @@
+{
+  "gen": 1599665882000,
+  "vfs": [
+    {"t": 1, "n": "bonus 1.map"},
+    {"t": 1, "n": "bonus 2.map"},
+    {"t": 1, "n": "bonus 3.map"},
+    {"t": 1, "n": "boss.map"},
+    {"t": 1, "n": "level 1.map"},
+    {"t": 1, "n": "level 2.map"},
+    {"t": 1, "n": "level 3.map"},
+    {"t": 1, "n": "level 4.map"}
+  ]
+}
