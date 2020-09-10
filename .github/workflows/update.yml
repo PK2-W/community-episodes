@@ -22,46 +22,61 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+        #with:
+        #  ref: public
+     
+      #- name: Update branch
+      #  run: |
+      #    git merge --no-commit master
+      #    git checkout --theirs master .
+     
       - name: Add dummy
         run: |
           uuidgen > random.txt
           pwd
           cat random.txt
 
-      - uses: stefanzweifel/git-auto-commit-action@v4
+      - uses: EndBug/add-and-commit@v4
         with:
-          # Required
-          commit_message: Workflow testing
+          # The arguments for the `git add` command (see the paragraph below for more info)
+          # Default: '.'
+          #add: 'src'
 
-          # Optional branch to push to, defaults to the current branch
-          branch: public
+          # The name of the user that will be displayed as the author of the commit
+          # Default: author of the commit that triggered the run
+          author_name: Octocat
 
-          # Optional options appended to `git-commit`
-          # See https://git-scm.com/docs/git-commit for a list of available options
-          #commit_options: '--no-verify --signoff'
+          # The email of the user that will be displayed as the author of the commit
+          # Default: author of the commit that triggered the run
+          author_email: action@github.io
 
-          # Optional glob pattern of files which should be added to the commit
-          # See the `pathspec`-documentation for git
-          # - https://git-scm.com/docs/git-add#Documentation/git-add.txt-ltpathspecgt82308203
-          # - https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec
-          #file_pattern: ./**/*.txt
+          # The local path to the directory where your repository is located. You should use actions/checkout first to set it up
+          # Default: '.'
+          #cwd: './path/to/the/repo'
 
-          # Optional local file path to the repository
-          #repository: .
+          # Whether to use the --force option on `git add`, in order to bypass eventual gitignores
+          # Default: false
+          #force: true
 
-          # Optional commit user and author settings
-          #commit_user_name: octocat
-          #commit_user_email: octocat@example.org
-          #commit_author: Octocat <actions@github.com>
+          # Whether to use the --signoff option on `git commit`
+          # Default: false
+          #signoff: true
 
-          # Optional tag message 
-          # Action will create and push a new tag to the remote repository and the defined branch
-          #tagging_message: 'v1.0.0'
+          # The message for the commit
+          # Default: 'Commit from GitHub Actions'
+          message: 'Workflow testing'
 
-          # Optional options appended to `git-push`
-          # See git-push documentation for details: https://git-scm.com/docs/git-push#_options
-          #push_options: '--force'
+          # Name of the branch to use, if different from the one that triggered the workflow
+          # Default: the branch that triggered the workflow (from GITHUB_REF)
+          ref: 'public'
 
-          # Optional: Disable dirty check and always try to create a commit and push
-          #skip_dirty_check: true
+          # The arguments for the `git rm` command (see the paragraph below for more info)
+          # Default: ''
+          #remove: "./dir/old_file.js"
+
+          # Name of the tag to add to the new commit (see the paragraph below for more info)
+          # Default: ''
+          #tag: "v1.0.0"
+        env:
+          # This is necessary in order to push a commit to the repo
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
