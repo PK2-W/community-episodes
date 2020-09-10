@@ -25,7 +25,7 @@ jobs:
 
       - name: Add dummy
         run: |
-          base64 /dev/urandom | head -c 10 > random.txt
+          uuidgen > random.txt
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -43,7 +43,7 @@ jobs:
           # See the `pathspec`-documentation for git
           # - https://git-scm.com/docs/git-add#Documentation/git-add.txt-ltpathspecgt82308203
           # - https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec
-          #file_pattern: src/*.js tests/*.js *.php
+          file_pattern: ./**/*.txt
 
           # Optional local file path to the repository
           #repository: .
