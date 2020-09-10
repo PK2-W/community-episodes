@@ -26,6 +26,8 @@ jobs:
       - name: Add dummy
         run: |
           uuidgen > random.txt
+          pwd
+          cat random.txt
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
