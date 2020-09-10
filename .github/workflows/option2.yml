@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI2
+name: Automatic release (dummy)
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -17,26 +17,42 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-        with:
-          ref: public
-     
-      - name: Update branch
+      - name: Get repository
         run: |
-          git merge --no-commit master
+          git clone https://github.com/PK2-W/community-episodes.git .
+          git config user.email "bumxu@users.noreply.github.com"
+          git config user.name "octocat"
+          git fetch
+
+      - name: Switch to release branch
+        run: |
+          git checkout --track origin/public
+          git branch -vv
+
+      - name: Updtate with changes
+        run: |
+          git merge --no-ff master
+        
+      - name: Clean generated files
+        run: |
+          rm -R *
           git checkout --theirs master .
      
-      - name: Add dummy
+      - name: "Placeholder: Add dummy file"
         run: |
-          uuidgen > random.txt
-          pwd
-          cat random.txt
+          echo "constant" > random.txt
 
       - name: Commit
+        id: commit
         run: |
-          git commit -a -m "Testing workflow"
-          git push origin public
+          git add .
+          git diff-index --quiet HEAD || git commit -a -m "Automatic actions"
+
+      - name: Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: public
