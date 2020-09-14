@@ -1,9 +1,5 @@
-# This is a basic workflow to help you get started with Actions
+name: Generate VFS files
 
-name: Automatic release (dummy)
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   workflow_dispatch:
 #  push:
@@ -22,7 +18,7 @@ jobs:
     steps:
       - name: Get repository
         run: |
-          git clone https://github.com/PK2-W/community-episodes.git .
+          git clone https://github.com/PK2-W/community-episodes.git . -b master
           git config user.email "bumxu@users.noreply.github.com"
           git config user.name "octocat"
           git fetch
@@ -41,9 +37,10 @@ jobs:
           rm -R *
           git checkout --theirs master .
      
-      - name: "Placeholder: Add dummy file"
+      - name: Generate VFS files
         run: |
-          echo "constant" > random.txt
+          npm install
+          npm run generate-vfs
 
       - name: Commit
         id: commit
