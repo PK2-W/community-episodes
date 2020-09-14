@@ -1,0 +1,18 @@
+Name	Animal Planet
+Author	Jere
+Maps	6
+Extras	MAP.bmp, sprites, music, bonus level(level 6)
+
+=========================
+
+Thanks for www.modarchive.com and PK2 Sprite editor!
+
+The Mod Archive's musics:
+
+Level 5 (Eagles)
+Level 6 (Oberheim power)
+
+Thanks to all!
+
+Jere
+(Jeremail@netti.fi)
