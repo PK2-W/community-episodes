@@ -1,0 +1,12 @@
+{
+  "name": "pk2-community-episodes",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "generate-vfs": "node ./scripts/generate-vfs.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7",
+    "glob": "^7"
+  }
+}
