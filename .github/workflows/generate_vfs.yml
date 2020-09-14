@@ -45,7 +45,7 @@ jobs:
       - name: Commit
         id: commit
         run: |
-          git add **/vfs.json -f
+          git add .
           git diff-index --quiet HEAD || git commit -a -m "Automatic actions"
 
       - name: Push
