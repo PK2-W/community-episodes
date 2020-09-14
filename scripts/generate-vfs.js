@@ -34,9 +34,9 @@ function generateIndex(path, depth = 0) {
     readDirR(path, tree, depth);
     const index = Object.values(tree)[0];
 
-    // nFs.writeFile(nPath.join(path, 'vfs.json'), JSON.stringify(index), function (err) {
-    //     if (err) return console.log(err);
-    // });
+    nFs.writeFile(nPath.join(path, 'vfs.json'), JSON.stringify(index), function (err) {
+        if (err) return console.log(err);
+    });
 
     return `Successfully generated ${ nPath.join(path, 'vfs.json') }.`;
 }
